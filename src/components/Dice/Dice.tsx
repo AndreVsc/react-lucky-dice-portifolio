@@ -5,9 +5,10 @@ interface DiceProps {
     userGuess: number | '';
     setUserGuess: (n: number | '') => void;
     handleRoll: () => void;
+    isRolling: boolean;
 }
 
-const Dice: React.FC<DiceProps> = ({ roll, userGuess, setUserGuess, handleRoll }) => {
+const Dice: React.FC<DiceProps> = ({ roll, userGuess, setUserGuess, handleRoll, isRolling }) => {
     const getActiveBalls = (number: number) => {
         switch (number) {
             case 1: return [4];
@@ -16,14 +17,14 @@ const Dice: React.FC<DiceProps> = ({ roll, userGuess, setUserGuess, handleRoll }
             case 4: return [1, 3, 5, 7];
             case 5: return [1, 3, 4, 5, 7];
             case 6: return [1, 2, 3, 5, 6, 7];
-            default: return [];
+            default: return [4];
         }
     };
 
     const activeBalls = getActiveBalls(roll);
 
     return (
-        <div id = 'dice'>
+        <div id='dice'>
             <div id='dice-container'>
                 <div id="colum-1">
                     <div className={`ball ${activeBalls.includes(1) ? 'ball-active' : 'ball-disable'}`}></div>
@@ -46,11 +47,12 @@ const Dice: React.FC<DiceProps> = ({ roll, userGuess, setUserGuess, handleRoll }
                     type="number"
                     value={userGuess}
                     onChange={(e) => setUserGuess(Number(e.target.value))}
-                    placeholder="Adivinhe um número (1-6)"
+                    placeholder="Guess a number (1-6)"
                     min="1"
                     max="6"
+                    disabled={isRolling}
                 />
-                <button onClick={handleRoll}>Sortear Dado</button>
+                <button onClick={handleRoll} disabled={isRolling}>Roll Dice</button>
             </div>
         </div>
     );
