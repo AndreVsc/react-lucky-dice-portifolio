@@ -3,12 +3,11 @@ import './Dice.css';
 interface DiceProps {
     roll: number;
     userGuess: number | '';
-    setRoll: (n: number) => void;
     setUserGuess: (n: number | '') => void;
     handleRoll: () => void;
 }
 
-const Dice: React.FC<DiceProps> = ({ roll, setRoll, userGuess, setUserGuess, handleRoll }) => {
+const Dice: React.FC<DiceProps> = ({ roll, userGuess, setUserGuess, handleRoll }) => {
     const getActiveBalls = (number: number) => {
         switch (number) {
             case 1: return [4];

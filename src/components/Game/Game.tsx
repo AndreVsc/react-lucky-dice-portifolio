@@ -32,7 +32,7 @@ const Game: React.FC = () => {
 
     return (
         <div id='game'>
-            <Dice roll={roll} setRoll={setRoll} userGuess={userGuess} setUserGuess={setUserGuess} handleRoll={handleRoll} />
+            <Dice roll={roll} userGuess={userGuess} setUserGuess={setUserGuess} handleRoll={handleRoll} />
             {message && <div className="message">{message}</div>}
         </div>
     );
