@@ -39,13 +39,6 @@ If the user guesses correctly, a confetti animation is displayed and a victory m
   <img src="./public/image-4.png" alt="Winning State">
 </p>
 
-### Losing State
-If the user guesses incorrectly, an error message is displayed and the number of attempts is incremented.
-
-<p align="center">
-  <img src="./public/image-5.png" alt="Losing State">
-</p>
-
 ## Main Code
 
 ### Game.tsx
