@@ -1,0 +1,79 @@
+@keyframes rgb-gradient {
+  0% {
+    color: #ff6666; /* red */
+  }
+  33% {
+    color: #66ff66; /* green */
+  }
+  66% {
+    color: #6666ff; /* blue */
+  }
+  100% {
+    color: #ff6666; /* red */
+  }
+}
+
+#card {
+  position: fixed;
+  left: 50%;
+  bottom: -100%;
+  transform: translateX(-50%);
+  background: white;
+  padding: 50px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 500px;
+  border: #DFDFDF 1px solid;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 4px, rgba(0, 0, 0, 0.15) 0px 7px 13px -3px;
+  transition: bottom 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+#card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#card.show {
+  bottom: 50%;
+  transform: translate(-50%, 50%);
+}
+
+#card.hide {
+  bottom: -100%;
+  transform: translateX(-50%);
+}
+
+#container-title .rgb-text {
+  animation: rgb-gradient 8s infinite;
+}
+
+#container-title {
+  margin-bottom: -10px;
+}
+
+#container-attempt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+#container-title h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 0px;
+}
+
+#attempt {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 0px;
+}
+
+#attempt-text {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}

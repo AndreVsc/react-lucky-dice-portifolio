@@ -51,6 +51,7 @@ const Dice: React.FC<DiceProps> = ({ roll, userGuess, setUserGuess, handleRoll, 
                     min="1"
                     max="6"
                     disabled={isRolling}
+                    className='input'
                 />
                 <button onClick={handleRoll} disabled={isRolling}>Roll Dice</button>
             </div>

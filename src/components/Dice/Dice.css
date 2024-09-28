@@ -13,8 +13,9 @@
     height: 120px;
     width: 120px;
 
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 4px, rgba(0, 0, 0, 0.15) 0px 7px 13px -3px, rgba(0, 0, 0, 0.15) 0px -3px 0px inset;
     border-radius: 10px;
-    border: #1F1F1F 1px solid;
+    border: #DFDFDF 1px solid;
     background-color: #ffffff;
     padding: 20px;
 }
@@ -51,11 +52,16 @@
 }
 
 .ball-active {
-    background-color: #1F1F1F;
+    background-color: #2F2F2F;
 }
 
 .ball-disable {
     background-color: #ffffff;
+}
+
+.input{
+    border: #DFDFDF 1px solid;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 4px, rgba(0, 0, 0, 0.15) 0px 7px 13px -3px;
 }
 
 .buttons{

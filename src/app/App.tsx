@@ -1,7 +1,20 @@
+import { useState } from 'react';
+import { Card } from '../components/Card/Card';
 import Game from '../components/Game/Game';
 import './App.css';
 
 function App() {
+  const [attempt, setAttempt] = useState<number>(0);
+  const [showCard, setShowCard] = useState<boolean>(false);
+
+  const handleWin = () => {
+    setShowCard(true);
+  };
+
+  const handleRestart = () => {
+    setAttempt(0);
+    setShowCard(false);
+  };
 
   return (
     <main id='container'>
@@ -9,13 +22,16 @@ function App() {
         <h1>LUCKY DICE</h1>
       </header>
       <section id='container-game'>
-        <Game />
+        <Game setAttempt={setAttempt} onWin={handleWin} attempt={attempt} />
       </section>
+      {showCard && (
+        <Card attempt={attempt} onRestart={handleRestart} />
+      )}
       <footer id='container-copy'>
         <p>Copyright © 2026</p>
       </footer>
     </main>
-  )
-};
+  );
+}
 
 export default App;

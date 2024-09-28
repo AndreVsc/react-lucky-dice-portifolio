@@ -37,8 +37,8 @@ input{
   font-size: 1em;
   padding: 0.6em 1.2em;
   border-radius: 8px;
-  border: 1px solid #1a1a1a;
-  font-family: inherit;
+  border: 0px solid #1a1a1a;
+ 
   transition: border-color 0.25s;
   text-align: center;
   height: 20px;
@@ -68,3 +68,7 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+input:focus,
+input:focus-visible {
+  outline: 0px auto -webkit-focus-ring-color;
+}
