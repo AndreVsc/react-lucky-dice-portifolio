@@ -228,4 +228,4 @@ export default App;
 - [Canvas Confetti Documentation](https://www.npmjs.com/package/canvas-confetti)
 
 ## Contact
-For more information, please contact via email: [vsandre40@gmail.com]
+For more information, please contact via email: vsandre40@gmail.com
