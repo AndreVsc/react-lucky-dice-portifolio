@@ -1,16 +1,11 @@
 import { useState } from 'react';
 import { Card } from '../components/Card/Card';
-import Game from '../components/Game/Game';
 import './App.css';
 import SceneCanva from '../components/Scene/Scene';
 
 function App() {
   const [attempt, setAttempt] = useState<number>(0);
   const [showCard, setShowCard] = useState<boolean>(false);
-
-  const handleWin = () => {
-    setShowCard(true);
-  };
 
   const handleRestart = () => {
     setAttempt(0);
