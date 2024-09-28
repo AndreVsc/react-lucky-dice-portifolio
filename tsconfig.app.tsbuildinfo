@@ -1,1 +1,1 @@
-{"root":["./src/main.tsx","./src/vite-env.d.ts","./src/app/app.tsx","./src/components/card/card.tsx","./src/components/dice/dice.tsx","./src/components/game/game.tsx","./src/utils/confettiutil.ts"],"version":"5.6.2"}
+{"root":["./src/main.tsx","./src/vite-env.d.ts","./src/app/App.tsx","./src/components/Card/Card.tsx","./src/components/Dice/Dice.tsx","./src/components/Game/Game.tsx","./src/utils/confettiUtil.ts"],"version":"5.6.2"}

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Card } from '../components/Card/Card';
 import Game from '../components/Game/Game';
 import './App.css';
+import SceneCanva from '../components/Scene/Scene';
 
 function App() {
   const [attempt, setAttempt] = useState<number>(0);
@@ -22,7 +23,7 @@ function App() {
         <h1>LUCKY DICE</h1>
       </header>
       <section id='container-game'>
-        <Game setAttempt={setAttempt} onWin={handleWin} attempt={attempt} />
+        <SceneCanva />
       </section>
       {showCard && (
         <Card attempt={attempt} onRestart={handleRestart} />
