@@ -39,6 +39,7 @@ const Game: React.FC<gameProps> = ({ setAttempt, onWin, attempt }) => {
       setRoll(newRoll);
 
       if (userGuess === newRoll) {
+        setAttempt(attempt + 1);
         setMessage('');
         launchConfetti();
         onWin();
