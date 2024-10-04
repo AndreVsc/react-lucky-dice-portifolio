@@ -70,3 +70,32 @@
     align-items: center;
     gap: 20px;
 }
+
+@keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  #dice-container.rolling {
+    animation: rotate 2s linear infinite;
+  }
+
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-7px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  #dice-container {
+    animation: float 3s ease-in-out infinite;
+  }

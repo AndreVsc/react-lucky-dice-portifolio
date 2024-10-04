@@ -24,6 +24,13 @@ body{
   background-color: #fcfcfc;
 }
 
+nav{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #737;
+}
+
 a {
   font-weight: 500;
   color: #646cff;

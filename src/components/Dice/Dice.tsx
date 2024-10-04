@@ -25,7 +25,7 @@ const Dice: React.FC<DiceProps> = ({ roll, userGuess, setUserGuess, handleRoll, 
 
     return (
         <div id='dice'>
-            <div id='dice-container'>
+            <div id='dice-container' className={isRolling ? 'rolling' : ''}>
                 <div id="colum-1">
                     <div className={`ball ${activeBalls.includes(1) ? 'ball-active' : 'ball-disable'}`}></div>
                     <div className={`ball ${activeBalls.includes(2) ? 'ball-active' : 'ball-disable'}`}></div>

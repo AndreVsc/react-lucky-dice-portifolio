@@ -58,12 +58,14 @@
   flex-direction: column;
   align-items: center;
   margin-bottom: 40px;
+  color: #222222;
 }
 
 #container-title h2 {
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 0px;
+  color: #222222;
 }
 
 #attempt {
